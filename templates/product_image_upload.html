@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Image Upload (CNN Detection)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 32px 32px 24px 32px;
+        }
+        .info-box {
+            background: #e3f2fd;
+            color: #1976d2;
+            border-radius: 6px;
+            padding: 12px 18px;
+            margin: 18px 0 12px 0;
+            font-size: 1.08rem;
+        }
+    </style>
+</head>
+<body>
+    <nav style="background:#fff; border-bottom:1px solid #e0e0e0; padding:0 0 0 24px; display:flex; align-items:center; height:56px;">
+        <span style="font-weight:bold; font-size:1.2rem; color:#2d3e50; margin-right:32px;">Product Recommender</span>
+        <a href="{{ url_for('text_query_page') }}" style="margin-right:18px; color:#1976d2; text-decoration:none;">Text Query</a>
+        <a href="{{ url_for('ocr_query_page') }}" style="margin-right:18px; color:#1976d2; text-decoration:none;">OCR Query</a>
+        <a href="{{ url_for('product_image_upload_page') }}" style="color:#1976d2; text-decoration:none;">Product Image Upload</a>
+    </nav>
+    <div class="card">
+        <h1 style="text-align:center; margin-top:0;">Product Image Upload (CNN Detection)</h1>
+        <form action="/product-image-upload" method="post" enctype="multipart/form-data" style="margin-bottom:12px; display:flex; align-items:center; gap:12px; justify-content:center;">
+            <label style="font-weight:500;">Upload product image:</label>
+            <input type="file" name="product_image" accept="image/*" required>
+            <button type="submit">Submit</button>
+        </form>
+        {% if response %}
+            <div class="info-box">
+                {{ response }}
+            </div>
+        {% endif %}
+        {% if products and products|length > 0 %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Country</th>
+                        <th>Size</th>
+                        <th>Color</th>
+                        <th>Confidence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in products %}
+                    <tr>
+                        <td>
+                            <img src="{{ url_for('static', filename=product.image) }}" alt="{{ product.name }}" style="width:64px; height:48px; object-fit:cover; border-radius:4px;">
+                        </td>
+                        <td>
+                            <a href="{{ url_for('product_detail', product_name=product.name|replace(' ', '_')) }}" style="color:#1976d2; text-decoration:underline;">
+                                {{ product.name }}
+                            </a>
+                        </td>
+                        <td>{{ product.description }}</td>
+                        <td><a href="#" style="color:#1976d2; text-decoration:underline;">{{ product.price }}</a></td>
+                        <td>{{ product.country }}</td>
+                        <td>{{ product.size }}</td>
+                        <td>{{ product.color }}</td>
+                        <td>
+                            {% if product.confidence %}
+                                <a href="#" style="color:#1976d2; text-decoration:underline;">{{ product.confidence }}</a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+</body>
+</html>

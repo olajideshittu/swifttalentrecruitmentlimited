@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Query Product Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav style="background:#fff; border-bottom:1px solid #e0e0e0; padding:0 0 0 24px; display:flex; align-items:center; height:56px;">
+        <span style="font-weight:bold; font-size:1.2rem; color:#2d3e50; margin-right:32px;">Product Recommender</span>
+        <a href="{{ url_for('text_query_page') }}" style="margin-right:18px; color:#1976d2; text-decoration:none;">Text Query</a>
+        <a href="{{ url_for('ocr_query_page') }}" style="margin-right:18px; color:#1976d2; text-decoration:none;">OCR Query</a>
+        <a href="{{ url_for('product_image_upload_page') }}" style="color:#1976d2; text-decoration:none;">Product Image Upload</a>
+    </nav>
+    <div class="header" style="margin-bottom:0;">
+        <h1>Text Query Product Recommendation</h1>
+    </div>
+    <div class="container">
+        <form action="/text-query" method="post" style="margin-bottom:12px;">
+            <label for="query">Enter your product query:</label>
+            <input type="text" id="query" name="query" placeholder="e.g. laptop with 16GB RAM" required>
+            <button type="submit">Submit</button>
+        </form>
+        {% if response %}
+            <div class="info-box">
+                {{ response }}
+            </div>
+        {% endif %}
+        {% if products and products|length > 0 %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Country</th>
+                        <th>Size</th>
+                        <th>Color</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in products %}
+                    <tr>
+                        <td>
+                            <img src="{{ url_for('static', filename=product.image) }}" alt="{{ product.name }}" style="width:64px; height:48px; object-fit:cover; border-radius:4px;">
+                        </td>
+                        <td>
+                            <a href="{{ url_for('product_detail', product_name=product.name|replace(' ', '_')) }}" style="color:#1976d2; text-decoration:underline;">
+                                {{ product.name }}
+                            </a>
+                        </td>
+                        <td>{{ product.description }}</td>
+                        <td><a href="#" style="color:#1976d2; text-decoration:underline;">{{ product.price }}</a></td>
+                        <td>{{ product.country }}</td>
+                        <td>{{ product.size }}</td>
+                        <td>{{ product.color }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+</body>
+</html>
