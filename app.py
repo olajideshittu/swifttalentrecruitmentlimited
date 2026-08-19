@@ -17,7 +17,7 @@ ocr_service = OCRService()
 class ProductRecommendationAPI(MethodView):
     """
     API endpoint for product recommendations based on a text query.
-    """
+    """  
     def post(self) -> 'flask.wrappers.Response':
         """
         Handle POST request for product recommendations.
@@ -334,7 +334,7 @@ def product_detail(product_name: str) -> 'flask.wrappers.Response':
 
             desc = get_description(matched_file)
             product = {
-                "image": matched_file,
+                "image": matched_file, 
                 "name": product_name.replace("_", " ").replace("-", " ").title(),
                 "description": desc,
                 "price": "$100",

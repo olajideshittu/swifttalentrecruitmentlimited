@@ -1,10 +1,9 @@
-# Task Progress Checklist
+# Skincare Product Scraping Task Progress
 
-- [x] Refactor codebase to add type hints and docstrings for all functions/classes
-- [x] Add logging and improve error handling throughout the codebase
-- [x] Refactor recommender logic into a modular, scalable recommender system
-- [x] Add a .gitignore file to exclude virtual environments and unnecessary files
-- [x] Add Jupyter notebook(s) for experimentation, exploration, and model development
-- [x] Implement a basic ML model pipeline for CNN (in a new module)
-- [x] Restructure codebase for clear separation of concerns (services, models, utils, etc.)
-- [ ] Test and verify all changes
+- [ ] Analyze requirements
+- [ ] Analyze the structure of the provided product page
+- [ ] Determine how to collect at least 50 product links
+- [ ] Update the scraper to handle a list of product URLs
+- [ ] Scrape product data (title, brand, images, references)
+- [ ] Save results in Excel file
+- [ ] Test and verify output

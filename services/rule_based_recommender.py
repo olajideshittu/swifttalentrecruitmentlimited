@@ -2,16 +2,14 @@ import re
 import random
 from typing import List, Dict, Any, Tuple, Optional
 from services.recommender_base import BaseRecommender
-
 class RuleBasedRecommender(BaseRecommender):
     """
     Rule-based recommender for matching products to queries.
     """
     def recommend(self, query: str, files: List[str], with_confidence: bool = False) -> Tuple[List[Dict[str, Any]], str]:
         products: List[Dict[str, Any]] = []
-        response: str = ""
+        response: str = "" 
         query_lower: str = query.lower()
-
         computer_specs = [
             "Intel i7, 16GB RAM, 1TB SSD, NVIDIA GTX 1660",
             "AMD Ryzen 5, 8GB RAM, 512GB SSD, Radeon Graphics",
@@ -20,11 +18,10 @@ class RuleBasedRecommender(BaseRecommender):
         ]
         laptop_specs = [
             "Intel i5, 8GB RAM, 512GB SSD, 15.6-inch FHD Display",
-            "AMD Ryzen 7, 16GB RAM, 1TB SSD, 14-inch Touchscreen",
+            "AMD Ryzen 7, 16GB RAM, 1TB SSD, 14-inch Touchscreen", 
             "Intel i7, 16GB RAM, 1TB SSD, 13-inch Retina Display",
             "Apple M1, 8GB RAM, 256GB SSD, 13-inch"
         ]
-
         def get_description(filename: str) -> str:
             fname = filename.lower()
             if re.search(r'\bshirt\b', fname) or re.search(r'\bt-shirt\b', fname) or re.search(r'\btshirt\b', fname):
@@ -41,7 +38,6 @@ class RuleBasedRecommender(BaseRecommender):
                 return f"Portable laptop equipped with {spec}."
             else:
                 return "A quality product from our collection."
-
         def make_product(
             filename: str,
             default_name: str,
@@ -62,7 +58,6 @@ class RuleBasedRecommender(BaseRecommender):
                 "color": default_color,
                 "confidence": confidence
             }
-
         query_words: List[str] = [w for w in re.findall(r'\w+', query_lower) if len(w) > 2]
         is_computer_accessories: bool = (
             ("computer" in query_lower or "desktop" in query_lower or "monitor" in query_lower or "laptop" in query_lower)
@@ -74,7 +69,7 @@ class RuleBasedRecommender(BaseRecommender):
             for f in files:
                 fname = f.rsplit('.', 1)[0].replace("_", " ").replace("-", " ").lower()
                 if any(re.search(r'\b' + re.escape(word) + r'\b', fname) for word in query_words) and f.lower().endswith(('.jpg', '.jpeg', '.png')):
-                    matched_files.add(f)
+                    matched_files.add(f) 
         else:
             for f in files:
                 fname = f.rsplit('.', 1)[0].replace("_", " ").replace("-", " ").lower()

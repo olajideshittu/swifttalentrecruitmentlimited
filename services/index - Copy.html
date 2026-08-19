@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Swift Talent Recruitment Company - Expert recruitment in IT, FMCG, Tech, Banking, Consulting & Telecom across Nigeria and Africa.">
+    <title>Swift Talent Recruitment Limited | Premium Talent Acquisition</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+        
+        .logo-font { font-family: 'Space Grotesk', sans-serif; }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 48, 135, 0.88), rgba(0, 48, 135, 0.88)), 
+                        url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .blog-card { transition: all 0.3s ease; }
+        .blog-card:hover { transform: translateY(-8px); }
+        
+        .full-article { display: none; }
+        .full-article.active { display: block; }
+        
+        .prose h2 { font-size: 1.75rem; font-weight: 600; margin-top: 2.5rem; margin-bottom: 1rem; color: #003087; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; }
+        .prose li { margin-bottom: 0.75rem; }
+    </style>
+</head>
+<body class="tailwind-content">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <img src="SWIFTTALENT.jpg" alt="Swift Talent Recruitment Logo" class="h-12 w-auto">
+                </div>
+
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="#home" class="hover:text-[#003087]">Home</a>
+                    <a href="#about" class="hover:text-[#003087]">About Us</a>
+                    <a href="#services" class="hover:text-[#003087]">Services</a>
+                    <a href="#testimonials" class="hover:text-[#003087]">Testimonials</a>
+                    <a href="#blog" class="hover:text-[#003087]">Blog</a>
+                    <a href="#candidates" class="hover:text-[#003087]">For Candidates</a>
+                    <a href="#postjob" class="hover:text-[#003087]">Post a Job</a>
+                    <a href="#contact" class="hover:text-[#003087]">Contact</a>
+                </div>
+
+                <a href="#postjob" 
+                   class="px-6 py-3 bg-[#003087] text-white text-sm font-semibold rounded-2xl hover:bg-[#002266]">
+                    POST A JOB
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero-bg text-white py-24">
+        <div class="max-w-7xl mx-auto px-6 text-center md:text-left">
+            <div class="max-w-2xl mx-auto md:mx-0">
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight logo-font tracking-tighter mb-6">
+                    Swift Talent.<br>
+                    Premium Recruitment.<br>
+                    <span class="text-[#00b894]">Instant Results.</span>
+                </h1>
+                <p class="text-xl text-white/90 mb-10">
+                    We recruit top-tier experts in Banking, Financial Technology, Consulting & Telecommunications across Nigeria and Africa.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#postjob" class="px-8 py-4 bg-[#00b894] text-white text-lg font-semibold rounded-3xl flex items-center gap-3 hover:scale-105">
+                        POST A JOB NOW
+                    </a>
+                    <a href="#candidates" class="px-8 py-4 border-2 border-white text-white text-lg font-semibold rounded-3xl hover:bg-white hover:text-[#003087]">
+                        SUBMIT RESUME
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-semibold text-[#003087] mb-6">Connecting exceptional talent with organizations that move fast.</h2>
+                    <p class="text-lg text-gray-600">
+                        Swift Talent Recruitment specializes in sourcing and placing high-caliber professionals in Banking, Financial Technology, Consulting & Telecommunications across Nigeria and Africa.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow">
+                    <h3 class="font-semibold text-xl mb-6 text-[#003087]">Our Core Values</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex gap-3"><span class="text-[#00b894] text-xl">✓</span> Speed & Precision</li>
+                        <li class="flex gap-3"><span class="text-[#00b894] text-xl">✓</span> Integrity First</li>
+                        <li class="flex gap-3"><span class="text-[#00b894] text-xl">✓</span> Excellence in Every Placement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold text-center text-[#003087] mb-12">Our Expertise Areas</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md text-center">💻 Banking & Financial Services</div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md text-center">🛒 Financial Technology</div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md text-center">🚀 Information Technology</div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md text-center">🏦 Fast-moving Consumer Goods</div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md text-center">📊 Consulting</div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md text-center">📡 Telecommunications</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="py-20 bg-[#003087] text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold text-center mb-12">Trusted by Leading Organizations</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 p-8 rounded-3xl">
+                    <p class="italic mb-6">"Swift Talent delivered exceptional candidates for our digital banking team. Fast and professional service."</p>
+                    <div class="font-semibold">Access Bank Plc</div>
+                </div>
+                <div class="bg-white/10 p-8 rounded-3xl">
+                    <p class="italic mb-6">"They understood our FMCG needs perfectly and helped us scale our sales team rapidly."</p>
+                    <div class="font-semibold">Fonyo Group</div>
+                </div>
+                <div class="bg-white/10 p-8 rounded-3xl">
+                    <p class="italic mb-6">"Best recruitment partner for banking and fintech talent in Nigeria. Highly recommended!"</p>
+                    <div class="font-semibold">Parallex Bank</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG LIST -->
+    <section id="blog" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="px-5 py-2 bg-[#00b894]/10 text-[#00b894] text-sm font-semibold rounded-3xl">INSIGHTS & TRENDS</span>
+                <h2 class="text-4xl font-semibold mt-4 text-[#003087]">Latest from our blog</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div onclick="showArticle(1)" class="blog-card bg-white rounded-3xl overflow-hidden shadow-sm cursor-pointer">
+                    <div class="h-2 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+                    <div class="p-8">
+                        <div class="text-xs uppercase text-gray-500 mb-3">TECH • APRIL 10, 2026</div>
+                        <h3 class="font-semibold text-xl leading-tight mb-4">Top 7 In-Demand Tech Skills in Nigeria for 2026</h3>
+                        <p class="text-gray-600 text-sm line-clamp-4">Artificial Intelligence, Cybersecurity, Cloud Computing, and Data Analytics continue to dominate hiring demands...</p>
+                        <div class="mt-6 text-[#00b894] text-sm font-medium flex items-center gap-2">Read full article <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+
+                <div onclick="showArticle(2)" class="blog-card bg-white rounded-3xl overflow-hidden shadow-sm cursor-pointer">
+                    <div class="h-2 bg-gradient-to-r from-amber-500 to-orange-500"></div>
+                    <div class="p-8">
+                        <div class="text-xs uppercase text-gray-500 mb-3">FMCG • APRIL 5, 2026</div>
+                        <h3 class="font-semibold text-xl leading-tight mb-4">FMCG Talent Trends: How Nigerian Brands Are Scaling Across Africa in 2026</h3>
+                        <p class="text-gray-600 text-sm line-clamp-4">From local sourcing to digital sales roles, discover the emerging positions helping FMCG companies expand...</p>
+                        <div class="mt-6 text-[#00b894] text-sm font-medium flex items-center gap-2">Read full article <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+
+                <div onclick="showArticle(3)" class="blog-card bg-white rounded-3xl overflow-hidden shadow-sm cursor-pointer">
+                    <div class="h-2 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
+                    <div class="p-8">
+                        <div class="text-xs uppercase text-gray-500 mb-3">BANKING • MARCH 28, 2026</div>
+                        <h3 class="font-semibold text-xl leading-tight mb-4">Why Nigerian Banks Are Losing Top Talent – And How to Fix It in 2026</h3>
+                        <p class="text-gray-600 text-sm line-clamp-4">High turnover in banking and fintech continues to challenge institutions. Explore proven retention strategies...</p>
+                        <div class="mt-6 text-[#00b894] text-sm font-medium flex items-center gap-2">Read full article <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FULL ARTICLE 1 -->
+    <section id="article-1" class="full-article py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <button onclick="backToBlog()" class="mb-8 flex items-center gap-2 text-[#00b894] font-medium">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </button>
+            <div class="text-xs uppercase text-gray-500 mb-3">TECH • APRIL 10, 2026</div>
+            <h1 class="text-4xl font-semibold text-[#003087] leading-tight mb-8">Top 7 In-Demand Tech Skills in Nigeria for 2026</h1>
+            
+            <div class="prose prose-lg max-w-none text-gray-700">
+                <p>As Nigeria’s digital economy continues to expand rapidly, the demand for skilled tech professionals has never been higher. With increasing investments in fintech, e-commerce, agritech, healthtech, and government digital transformation initiatives, employers are actively seeking candidates with specific high-value skills.</p>
+                
+                <h2>1. Artificial Intelligence & Machine Learning</h2>
+                <p>AI remains the most sought-after skill in 2026. Companies need professionals who can build intelligent systems, implement prompt engineering, develop ethical AI solutions, and integrate large language models into business processes. Demand is especially high in fintech for fraud detection and personalized customer experiences.</p>
+                
+                <h2>2. Cybersecurity</h2>
+                <p>With the rise in sophisticated cyberattacks targeting Nigerian businesses, organizations are prioritizing cybersecurity experts who can secure cloud infrastructure, conduct penetration testing, and ensure compliance with the Nigeria Data Protection Act.</p>
+                
+                <h2>3. Cloud Computing (AWS, Azure, Google Cloud)</h2>
+                <p>Massive cloud migration is happening across banks, telcos, and startups. Skills in cloud architecture, security, cost optimization, and multi-cloud strategies are in very high demand.</p>
+                
+                <h2>4. Data Analytics & Business Intelligence</h2>
+                <p>Professionals skilled in SQL, Python, Power BI, Tableau, and data storytelling are helping companies turn raw data into strategic decisions.</p>
+                
+                <h2>5. Full-Stack & Mobile Development</h2>
+                <p>JavaScript frameworks (React, Next.js, Node.js) and cross-platform mobile development using Flutter and React Native continue to power Nigeria’s booming startup ecosystem.</p>
+                
+                <h2>6. DevOps & Automation</h2>
+                <p>Skills in Docker, Kubernetes, CI/CD pipelines, and infrastructure as code help companies deploy faster with higher reliability.</p>
+                
+                <h2>7. Digital Marketing with AI Tools</h2>
+                <p>Combining traditional digital marketing expertise with AI-powered tools for content creation, SEO, and performance analytics has become a powerful hybrid skill set.</p>
+                
+                <div class="bg-[#003087]/5 p-8 rounded-3xl mt-12">
+                    <p class="font-semibold text-[#003087]">At Swift Talent Recruitment, we have successfully placed over 240 professionals with these in-demand skills in the past 12 months. Whether you're hiring or looking for your next role, we're here to help.</p>
+                </div>
+            </div>
+            
+            <button onclick="backToBlog()" class="mt-16 px-8 py-4 border border-[#003087] text-[#003087] font-semibold rounded-3xl">← Back to All Articles</button>
+        </div>
+    </section>
+
+    <!-- FULL ARTICLE 2 -->
+    <section id="article-2" class="full-article py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <button onclick="backToBlog()" class="mb-8 flex items-center gap-2 text-[#00b894] font-medium">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </button>
+            <div class="text-xs uppercase text-gray-500 mb-3">FMCG • APRIL 5, 2026</div>
+            <h1 class="text-4xl font-semibold text-[#003087] leading-tight mb-8">FMCG Talent Trends: How Nigerian Brands Are Scaling Across Africa in 2026</h1>
+            
+            <div class="prose prose-lg max-w-none text-gray-700">
+                <p>Nigerian FMCG companies are at the forefront of Africa’s consumer goods growth. As brands expand into new markets such as Ghana, Kenya, Uganda, and beyond, the talent requirements have evolved significantly.</p>
+                
+                <h2>Key Emerging Roles in 2026</h2>
+                <ul>
+                    <li><strong>Regional Sales & Distribution Managers</strong> – Professionals with deep understanding of modern and traditional trade channels across multiple countries.</li>
+                    <li><strong>Digital Sales & E-commerce Specialists</strong> – Experts in omnichannel strategies and online marketplace management.</li>
+                    <li><strong>Supply Chain & Logistics Optimization Experts</strong> – Focused on cost reduction, sustainability, and efficient last-mile delivery.</li>
+                    <li><strong>Brand Managers with Pan-African Experience</strong> – Who can adapt marketing campaigns across diverse cultures and languages.</li>
+                </ul>
+                
+                <h2>Retention Strategies That Work</h2>
+                <p>Successful FMCG brands are reducing turnover by offering competitive compensation, clear career progression, performance bonuses tied to expansion targets, and flexible work arrangements.</p>
+                
+                <p>Swift Talent Recruitment has helped numerous FMCG companies build high-performing teams that drive sustainable growth across the African continent.</p>
+            </div>
+            
+            <button onclick="backToBlog()" class="mt-16 px-8 py-4 border border-[#003087] text-[#003087] font-semibold rounded-3xl">← Back to All Articles</button>
+        </div>
+    </section>
+
+    <!-- FULL ARTICLE 3 -->
+    <section id="article-3" class="full-article py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <button onclick="backToBlog()" class="mb-8 flex items-center gap-2 text-[#00b894] font-medium">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </button>
+            <div class="text-xs uppercase text-gray-500 mb-3">BANKING • MARCH 28, 2026</div>
+            <h1 class="text-4xl font-semibold text-[#003087] leading-tight mb-8">Why Nigerian Banks Are Losing Top Talent – And How to Fix It in 2026</h1>
+            
+            <div class="prose prose-lg max-w-none text-gray-700">
+                <p>High attrition rates in Nigeria’s banking and fintech sector remain a critical challenge. Many experienced professionals are leaving for better opportunities abroad or with competing fintech companies.</p>
+                
+                <h2>Main Causes of Talent Flight</h2>
+                <ul>
+                    <li>Below-market compensation packages</li>
+                    <li>Limited career growth and development opportunities</li>
+                    <li>Rigid work structures and poor work-life balance</li>
+                    <li>Lack of recognition and non-monetary incentives</li>
+                </ul>
+                
+                <h2>Proven Retention Strategies for 2026</h2>
+                <p>Forward-thinking banks are successfully reducing attrition through:</p>
+                <ul>
+                    <li>Structured career development and mentorship programs</li>
+                    <li>Flexible and hybrid work arrangements</li>
+                    <li>Performance-based bonuses and equity options</li>
+                    <li>Continuous learning sponsorship for professional certifications</li>
+                    <li>Strong employee recognition cultures</li>
+                </ul>
+                
+                <p>Swift Talent has supported several banks and fintech companies in both attracting and retaining top talent through strategic recruitment and retention advisory.</p>
+            </div>
+            
+            <button onclick="backToBlog()" class="mt-16 px-8 py-4 border border-[#003087] text-[#003087] font-semibold rounded-3xl">← Back to All Articles</button>
+        </div>
+    </section>
+
+    <!-- CANDIDATES RESUME SECTION -->
+    <section id="candidates" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="px-5 py-2 bg-[#00b894]/10 text-[#00b894] text-sm font-semibold rounded-3xl">FOR JOB SEEKERS</span>
+                <h2 class="text-4xl font-semibold mt-4 text-[#003087]">Submit Your Resume</h2>
+                <p class="mt-4 text-gray-600 max-w-xl mx-auto">
+                    Join our talent pool. We regularly match qualified candidates with top opportunities in Banking, Fintech, IT, FMCG, Consulting & Telecom.
+                </p>
+            </div>
+
+            <div class="max-w-2xl mx-auto bg-gray-50 p-10 rounded-3xl shadow-sm">
+                <form action="https://formsubmit.co/swifttalentrecruitment@gmail.com" method="POST" class="space-y-6">
+                    <input type="hidden" name="_subject" value="New Resume Submission - Swift Talent">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Full Name *</label>
+                            <input type="text" name="name" required class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-[#00b894] outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email Address *</label>
+                            <input type="email" name="email" required class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-[#00b894] outline-none">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Phone Number *</label>
+                        <input type="tel" name="phone" required class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-[#00b894] outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Preferred Role / Industry</label>
+                        <select name="role" class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-[#00b894] outline-none">
+                            <option value="">Select Industry</option>
+                            <option value="Banking">Banking & Financial Services</option>
+                            <option value="Fintech">Financial Technology (Fintech)</option>
+                            <option value="IT">Information Technology</option>
+                            <option value="Telecom">Telecommunication</option>
+                            <option value="Consulting">Consulting</option>
+                            <option value="FMCG">Fast-moving Consumer Goods (FMCG)</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Resume / CV Link (Google Drive, LinkedIn, Dropbox, etc.) *</label>
+                        <input type="url" name="resume_link" placeholder="https://drive.google.com/..." required
+                               class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-[#00b894] outline-none">
+                        <p class="text-xs text-gray-500 mt-2">Please share a publicly accessible link to your resume/CV</p>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Cover Note / Experience Summary (Optional)</label>
+                        <textarea name="message" rows="4" class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-[#00b894] outline-none resize-none"
+                                  placeholder="Briefly describe your experience and what you're looking for..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-[#003087] text-white font-semibold rounded-3xl hover:bg-[#002266] flex items-center justify-center gap-2">
+                        <i class="fas fa-paper-plane"></i> SUBMIT RESUME
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- POST A JOB SECTION -->
+    <section id="postjob" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="px-5 py-2 bg-[#003087]/10 text-[#003087] text-sm font-semibold rounded-3xl">FOR EMPLOYERS</span>
+                <h2 class="text-4xl font-semibold mt-4 text-[#003087]">Post a Job</h2>
+                <p class="mt-4 text-gray-600 max-w-xl mx-auto">
+                    Tell us about the position you're hiring for. Our recruitment team will review your request and contact you within 2 business hours.
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto bg-white p-10 rounded-3xl shadow-sm">
+                <form action="https://formsubmit.co/swifttalentrecruitment@gmail.com" method="POST" class="space-y-8">
+                    <input type="hidden" name="_subject" value="New Job Posting Request - Swift Talent">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Company Name *</label>
+                            <input type="text" name="company_name" required class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-[#00b894] outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Your Full Name *</label>
+                            <input type="text" name="contact_name" required class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-[#00b894] outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email Address *</label>
+                            <input type="email" name="email" required class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-[#00b894] outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Phone Number *</label>
+                            <input type="tel" name="phone" required class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-[#00b894] outline-none">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Job Title *</label>
+                        <input type="text" name="job_title" placeholder="e.g. Senior Backend Developer, Branch Manager" required
+                               class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-[#00b894] outline-none">
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Location</label>
+                            <input type="text" name="location" placeholder="Lagos, Abuja, Remote, Hybrid" 
+                                   class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-[#00b894] outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Salary Range (Optional)</label>
+                            <input type="text" name="salary_range" placeholder="₦450,000 - ₦850,000 monthly"
+                                   class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-[#00b894] outline-none">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Job Description & Requirements *</label>
+                        <textarea name="job_description" rows="7" required
+                                  class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-[#00b894] outline-none resize-none"
+                                  placeholder="Describe the role, key responsibilities, required qualifications, experience level..."></textarea>
+                    </div>
+
+                    <button type="submit"
+                            class="w-full py-5 bg-[#003087] text-white font-semibold rounded-3xl hover:bg-[#002266] flex items-center justify-center gap-3 text-lg">
+                        <i class="fas fa-briefcase"></i>
+                        SUBMIT JOB REQUEST
+                    </button>
+                </form>
+
+                <p class="text-center text-xs text-gray-500 mt-8">
+                    Our team will review your request and reach out shortly to discuss next steps.
+                </p>
+            </div>
+        </div>
+    </section>
+
+   <!-- CONTACT SECTION - Updated as requested -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-semibold text-[#003087] mb-6">Get In Touch</h2>
+            <p class="text-gray-600 mb-10 max-w-md mx-auto">
+                Prefer to chat? Reach out to us on WhatsApp. Our team responds quickly.
+            </p>
+            
+            <a href="https://wa.me/2347059515554" 
+               target="_blank"
+               class="inline-flex items-center gap-4 bg-green-600 hover:bg-green-700 text-white text-xl font-semibold px-10 py-5 rounded-3xl transition-all">
+                <i class="fab fa-whatsapp text-4xl"></i>
+                <div>
+                    <span class="block text-sm opacity-80">Message us on WhatsApp</span>
+                    <span>Chat with Swift Talent</span>
+                </div>
+            </a>
+            
+            <p class="text-xs text-gray-500 mt-8">
+                We do not accept calls. All communication is handled via WhatsApp and email.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER - Updated with LinkedIn -->
+    <footer class="bg-[#003087] text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <img src="SWIFTTALENT.jpg" alt="Swift Talent Logo" class="h-12 mx-auto mb-6 opacity-90">
+            
+            <div class="flex justify-center gap-8 mb-6">
+                <a href="https://www.linkedin.com/company/swift-talent-recruitment/" 
+                   target="_blank" 
+                   class="hover:text-[#00b894] text-2xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/2347059515554" 
+                   target="_blank" 
+                   class="hover:text-[#00b894] text-2xl">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            
+            <p class="text-sm">&copy; 2026 Swift Talent Recruitment Company. All Rights Reserved. | Lagos, Nigeria</p>
+        </div>
+    </footer>
+
+    <script>
+        function showArticle(id) {
+            document.querySelectorAll('.full-article').forEach(article => article.classList.remove('active'));
+            document.getElementById(`article-${id}`).classList.add('active');
+            document.getElementById(`article-${id}`).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function backToBlog() {
+            document.querySelectorAll('.full-article').forEach(article => article.classList.remove('active'));
+            document.getElementById('blog').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
