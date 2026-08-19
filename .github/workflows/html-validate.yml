@@ -1,0 +1,21 @@
+﻿name: HTML Validate
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  html-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install html-validate
+        run: |
+          npm init -y
+          npm install --no-save html-validate@8
+      - name: Run html-validate
+        run: npx html-validate "index.html" --config-reports-summary
