@@ -1,0 +1,3 @@
+﻿User-agent: *
+Allow: /
+Sitemap: https://swifttalentrecruitment.com/sitemap.xml
